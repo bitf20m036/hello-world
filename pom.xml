@@ -27,17 +27,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.9.0</version> <!-- Updated version to support Java 8 -->
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.9.1</version>
             </plugin>
         </plugins>
     </build>
@@ -48,6 +42,12 @@
         </dependencies>
     </dependencyManagement>
 
+    <reporting>
+        <plugins>
+            <!-- Add your reporting plugins here -->
+        </plugins>
+    </reporting>
+
     <scm>
         <connection>scm:git:git@github.com:jleetutorial/maven-project.git</connection>
         <developerConnection>scm:git:git@github.com:jleetutorial/maven-project.git</developerConnection>
@@ -55,7 +55,6 @@
         <url>http://github.com/jleetutorial/maven-project</url>
     </scm>
 
-    <prerequisites>
-        <maven>3.0.3</maven>
-    </prerequisites>
+    <!-- Prerequisites section is removed -->
+
 </project>
